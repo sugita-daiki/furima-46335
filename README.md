@@ -45,7 +45,7 @@
 ## アソシエーション
 # Product
  belongs_to :user
- has_many :orders
+ has_one :order
  belongs_to :category
  belongs_to :status
  belongs_to :shipping_cost
