@@ -1,0 +1,106 @@
+<mxfile host="65bd71144e">
+    <diagram name="FURIMA-ERD" id="FURIMA-ERD">
+        <mxGraphModel dx="157" dy="554" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="98" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=3;endArrow=ERmany;endFill=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="users" target="orders">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="users" value="users&#xa;----------------------&#xa;id (PK)&#xa;nickname&#xa;email (unique)&#xa;encrypted_password&#xa;last_name&#xa;first_name&#xa;last_name_kana&#xa;first_name_kana&#xa;birth_day&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="60" width="220" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="products" value="products&#xa;----------------------&#xa;id (PK)&#xa;user_id (FK)&#xa;name&#xa;description&#xa;category_id&#xa;status_id&#xa;shipping_cost_id&#xa;shipping_area_id&#xa;shipping_days_id&#xa;price&#xa;fee&#xa;profit&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="60" width="240" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="orders" value="orders&#xa;----------------------&#xa;id (PK)&#xa;user_id (FK)&#xa;product_id (FK)&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fontSize=12;glass=0;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="695" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="addresses" value="addresses&#xa;----------------------&#xa;id (PK)&#xa;order_id (FK)&#xa;postal_code&#xa;prefecture_id&#xa;city&#xa;block&#xa;building&#xa;phone_number&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="640" width="240" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="categories" value="categories (ActiveHash)&#xa;----------------------&#xa;id&#xa;name&#xa;ancestry&#xa;例: レディース、メンズ&#xa;子供用品、インテリア&#xa;本・音楽・ゲーム、&#xa;おもちゃ・ホビー・グッズ&#xa;家電・スマホ・カメラ&#xa;スポーツ・レジャー&#xa;ハンドメイド&#xa;チケット&#xa;自動車・オートバイ&#xa;その他" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="940" y="60" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="statuses" value="statuses (ActiveHash)&#xa;----------------------&#xa;id&#xa;name&#xa;例: 新品・未使用&#xa;未使用に近い&#xa;目立った傷や汚れなし&#xa;やや傷や汚れあり&#xa;傷や汚れあり&#xa;全体的に状態が悪い" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="810" width="200" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="shipping_costs" value="shipping_costs (ActiveHash)&#xa;----------------------&#xa;id&#xa;name&#xa;例: 着払い(購入者負担)&#xa;送料込み(出品者負担)" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="890" y="1070" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="shipping_areas" value="shipping_areas (ActiveHash)&#xa;----------------------&#xa;id&#xa;name&#xa;例: 北海道、青森県&#xa;岩手県、宮城県&#xa;秋田県、山形県&#xa;福島県、茨城県&#xa;栃木県、群馬県&#xa;埼玉県、千葉県&#xa;東京都、神奈川県&#xa;新潟県、富山県&#xa;石川県、福井県&#xa;山梨県、長野県&#xa;岐阜県、静岡県&#xa;愛知県、三重県&#xa;滋賀県、京都府&#xa;大阪府、兵庫県&#xa;奈良県、和歌山県&#xa;鳥取県、島根県&#xa;岡山県、広島県&#xa;山口県、徳島県&#xa;香川県、愛媛県&#xa;高知県、福岡県&#xa;佐賀県、長崎県&#xa;熊本県、大分県&#xa;宮崎県、鹿児島県&#xa;沖縄県、未定" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=8;dashed=1;glass=0;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="280" width="210" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="shipping_days" value="shipping_days (ActiveHash)&#xa;----------------------&#xa;id&#xa;name&#xa;例: 1~2日で発送&#xa;2~3日で発送&#xa;4~7日で発送" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="620" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel1" style="endArrow=ERmany;endFill=0;strokeWidth=3;strokeColor=#6c8ebf;endSize=12;" parent="1" source="users" target="products" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="200" as="sourcePoint"/>
+                        <mxPoint x="400" y="200" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="350" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rel3" style="endArrow=ERmany;endFill=0;strokeWidth=3;strokeColor=#82b366;endSize=12;startArrow=none;startFill=0;" parent="1" target="orders" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="510" y="340" as="sourcePoint"/>
+                        <mxPoint x="520" y="690" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="510" y="640"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rel4" style="endArrow=ERmany;endFill=0;strokeWidth=3;strokeColor=#d6b656;endSize=12;" parent="1" source="orders" target="addresses" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="760" as="sourcePoint"/>
+                        <mxPoint x="300" y="760" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rel5" style="endArrow=crow;endFill=1;strokeWidth=3;strokeColor=#9673a6;dashed=1;endSize=12;" edge="1" parent="1" source="products" target="categories">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="120" as="sourcePoint"/>
+                        <mxPoint x="770" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rel6" style="endArrow=crow;endFill=1;strokeWidth=3;strokeColor=#d79b00;dashed=1;endSize=12;" edge="1" parent="1" source="products" target="statuses">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="140" as="sourcePoint"/>
+                        <mxPoint x="700" y="580" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="770" y="530"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rel7" style="endArrow=crow;endFill=1;strokeWidth=3;strokeColor=#82b366;dashed=1;endSize=12;" edge="1" parent="1" target="shipping_costs">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="580" y="350" as="sourcePoint"/>
+                        <mxPoint x="660" y="790" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="830" y="840"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rel8" style="endArrow=crow;endFill=1;strokeWidth=3;strokeColor=#b85450;dashed=1;endSize=12;" edge="1" parent="1" source="products" target="shipping_areas">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="180" as="sourcePoint"/>
+                        <mxPoint x="990" y="370" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rel9" style="endArrow=crow;endFill=1;strokeWidth=3;strokeColor=#d6b656;dashed=1;endSize=12;" edge="1" parent="1" source="products" target="shipping_days">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="200" as="sourcePoint"/>
+                        <mxPoint x="1070" y="660" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="title" value="FURIMA アプリケーション ER図" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="20" width="300" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend" value="凡例:&#xa;実線 = 直接的な外部キー関係&#xa;破線 = ActiveHashとの関係&#xa;点線枠 = ActiveHashクラス&#xa;三叉線端 = 多の側" style="text;html=1;strokeColor=none;fillColor=#f5f5f5;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="900" width="200" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
