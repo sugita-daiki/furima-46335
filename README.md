@@ -23,13 +23,13 @@ Things you may want to cover:
 # User
  has_many :products
  has_many :orders
-* Ruby version
 
-* System dependencies
+
+
 
 #### 2. products テーブル
 商品情報を管理するテーブル
-* Configuration
+
 
 | Column           | Type       | Options                        |
 |------------------|------------|--------------------------------|
