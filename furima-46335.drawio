@@ -10,13 +10,13 @@
                 <mxCell id="users" value="users&#xa;----------------------&#xa;nickname&#xa;email (unique)&#xa;encrypted_password&#xa;last_name&#xa;first_name&#xa;last_name_kana&#xa;first_name_kana&#xa;birth_day&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="60" y="60" width="220" height="280" as="geometry"/>
                 </mxCell>
-                <mxCell id="products" value="products&#xa;----------------------&#xa;user (FK)&#xa;name&#xa;description&#xa;category_id&#xa;status_id&#xa;shipping_cost_id&#xa;prefecture_id&#xa;shipping_day_id&#xa;price&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+                <mxCell id="products" value="products&#xa;----------------------&#xa;user &#xa;name&#xa;description&#xa;category_id&#xa;status_id&#xa;shipping_cost_id&#xa;prefecture_id&#xa;shipping_day_id&#xa;price&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="390" y="60" width="240" height="280" as="geometry"/>
                 </mxCell>
-                <mxCell id="orders" value="orders&#xa;----------------------&#xa;user_id (FK)&#xa;product_id (FK)&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fontSize=12;glass=0;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                <mxCell id="orders" value="orders&#xa;----------------------&#xa;user&#xa;product&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fontSize=12;glass=0;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
                     <mxGeometry x="400" y="695" width="220" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="addresses" value="addresses&#xa;----------------------&#xa;order_id (FK)&#xa;postal_code&#xa;prefecture_id&#xa;city&#xa;block&#xa;building&#xa;phone_number&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="1" vertex="1">
+                <mxCell id="addresses" value="addresses&#xa;----------------------&#xa;order&#xa;postal_code&#xa;prefecture_id&#xa;city&#xa;block&#xa;building&#xa;phone_number&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="60" y="640" width="240" height="240" as="geometry"/>
                 </mxCell>
                 <mxCell id="rel1" style="endArrow=ERmany;endFill=0;strokeWidth=3;strokeColor=#6c8ebf;endSize=12;" parent="1" source="users" target="products" edge="1">
