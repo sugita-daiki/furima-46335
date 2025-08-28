@@ -47,7 +47,8 @@
 注文情報を管理するテーブル
 
 | Column     | Type       | Options                        |
-|-------------|-----------|--------------------------------|
+|------------|------------|--------------------------------|
+| id         |  integer   | PRIMARY KEY                    |
 | user       | references | null: false, foreign_key: true |
 | product    | references | null: false, foreign_key: true |
 | created_at | datetime   | null: false                    |
@@ -65,6 +66,7 @@
 
 | Column        | Type       | Options                         |
 |---------------|--------    |---------------------------------|
+| id            |  integer   | PRIMARY KEY                     |
 | order         | references | null: false, foreign_key: true  |
 | postal_code   | string     | null: false                     |
 | prefecture_id | integer    | null: false                     |
