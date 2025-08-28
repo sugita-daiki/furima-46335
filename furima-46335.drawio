@@ -7,7 +7,7 @@
                 <mxCell id="98" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=3;endArrow=ERmany;endFill=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" source="users" target="orders" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="users" value="users&#xa;----------------------&#xa;nickname&#xa;email (unique)&#xa;encrypted_password&#xa;last_name&#xa;first_name&#xa;last_name_kana&#xa;first_name_kana&#xa;birth_day&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
+                <mxCell id="users" value="users&#xa;----------------------&#xa;id&#xa;nickname&#xa;email (unique)&#xa;encrypted_password&#xa;last_name&#xa;first_name&#xa;last_name_kana&#xa;first_name_kana&#xa;birth_day&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="60" y="60" width="220" height="280" as="geometry"/>
                 </mxCell>
                 <mxCell id="products" value="products&#xa;----------------------&#xa;user &#xa;name&#xa;description&#xa;category_id&#xa;status_id&#xa;shipping_cost_id&#xa;prefecture_id&#xa;shipping_day_id&#xa;price&#xa;created_at&#xa;updated_at" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">

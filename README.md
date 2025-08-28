@@ -3,7 +3,8 @@
 ユーザー情報を管理するテーブル
 
 | Column             | Type     | Options                   |
-|--------------------|----------|------|------------------- |
+|--------------------|----------|---------------------------|
+| id                 | integer  | PRIMARY KEY               |
 | nickname           | string   | null: false               |
 | email              | string   | null: false, unique: true |
 | encrypted_password | string   | null: false, default: ""  |
@@ -25,7 +26,8 @@
 商品情報を管理するテーブル
 
 | Column           | Type       | Options                        |
-|------------------|------------|------------------------------- |
+|------------------|------------|--------------------------------|
+| id               | integer    | PRIMARY KEY                    |
 | user             | references | null: false, foreign_key: true |
 | name             | string     | null: false                    |
 | description      | text       | null: false                    |
@@ -65,7 +67,7 @@
 配送先住所情報を管理するテーブル
 
 | Column        | Type       | Options                         |
-|---------------|--------    |---------------------------------|
+|---------------|------------|---------------------------------|
 | id            |  integer   | PRIMARY KEY                     |
 | order         | references | null: false, foreign_key: true  |
 | postal_code   | string     | null: false                     |
