@@ -4,11 +4,13 @@ RSpec.describe User, type: :model do
   describe 'ユーザー新規登録' do
     let(:user) { build(:user) }
 
-    it 'すべての項目が正しければ有効' do
-      expect(user).to be_valid
+    context '新規登録ができる時' do
+      it 'すべての項目が正しければ有効' do
+        expect(user).to be_valid
+      end
     end
 
-    context '新規登録/ユーザー情報' do
+    context '新規登録ができない時' do
       it 'ニックネームが必須' do
         user.nickname = ''
         user.valid?
