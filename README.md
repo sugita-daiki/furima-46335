@@ -17,17 +17,17 @@ README
 | birth_day          | date     | null: false               |
 | created_at         | datetime | null: false               |
 | updated_at         | datetime | null: false               |
-Things you may want to cover:
+
 
 ## アソシエーション
 # User
- has_many :products
+ has_many :items
  has_many :orders
 
 
 
 
-#### 2. products テーブル
+#### 2. items テーブル
 商品情報を管理するテーブル
 
 
@@ -45,10 +45,10 @@ Things you may want to cover:
 | price            | integer    | null: false                    |
 | created_at       | datetime   | null: false                    |
 | updated_at       | datetime   | null: false                    |
-* Database creation
+
 
 ## アソシエーション
-# Product
+# Item
  belongs_to :user
  has_one :order
 
@@ -59,14 +59,14 @@ Things you may want to cover:
 |------------|------------|--------------------------------|
 | id         |  integer   | PRIMARY KEY                    |
 | user       | references | null: false, foreign_key: true |
-| product    | references | null: false, foreign_key: true |
+| item       | references | null: false, foreign_key: true |
 | created_at | datetime   | null: false                    |
 | updated_at | datetime   | null: false                    |
 
 ## アソシエーション
 # Order
  belongs_to :user
- belongs_to :product
+ belongs_to :item
  has_one    :address
 
 
