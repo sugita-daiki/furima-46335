@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
 
   def create
     Item.create(item_params)
-    redirect_to '/'
+    redirect_to ''
   end
 
   private
