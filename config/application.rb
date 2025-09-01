@@ -6,6 +6,9 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# ActiveHashを明示的に読み込む
+require 'active_hash'
+
 module Furima46335
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
