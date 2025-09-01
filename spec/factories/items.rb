@@ -11,7 +11,6 @@ FactoryBot.define do
     association :user
 
     after(:build) do |item|
-      # テスト用のダミー画像を作成
       item.image.attach(
         io: StringIO.new('dummy image content'),
         filename: 'test_image.jpg',
