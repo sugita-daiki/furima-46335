@@ -24,6 +24,7 @@ app/assets/stylesheets/items/new.css %>
           クリックしてファイルをアップロード
         </p>
         <%= f.file_field :image, id:"item-image" %>
+        
         <% if @item.image.attached? %>
         <% end %>
       </div>
