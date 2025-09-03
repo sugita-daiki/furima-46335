@@ -44,7 +44,7 @@ class ItemsController < ApplicationController
   end
 
   def check_item_ownership
-    @item = Item.find(params[:id])
+    @item = item.find(params[:id])
     return if @item.user_id == current_user.id
 
     redirect_to root_path
