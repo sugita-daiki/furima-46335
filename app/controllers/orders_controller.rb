@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :set_item, only: [:index, :create]
   def index
     @order_address = OrderAddress.new
   end
@@ -18,5 +19,9 @@ class OrdersController < ApplicationController
 
   def order_address_params
     params.require(:order_address).permit(:postal_code, :prefecture_id, :city, :block, :building, :phone_number, :token)
+  end
+
+  def set_item
+    @item = Item.find(params[:item_id])
   end
 end
