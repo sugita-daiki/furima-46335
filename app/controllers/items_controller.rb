@@ -51,6 +51,7 @@ class ItemsController < ApplicationController
   end
 
   def check_item_ownership
-    redirect_to root_path unless @item.user_id == current_user.id
+    # 出品者でない場合、または売却済み商品の場合はトップページへ
+    redirect_to root_path unless @item.user_id == current_user.id && @item.order.blank?
   end
 end
