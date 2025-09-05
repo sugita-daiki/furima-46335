@@ -6,8 +6,8 @@ FactoryBot.define do
     block { '青葉区1-1-1' }
     building {}
     phone_number { '09012345678' }
-    token { 'tok_test_token' }
     user_id { 1 }
     item_id { 1 }
+    token { 'tok_abcdefghijk00000000000000000' }
   end
 end
