@@ -50,6 +50,11 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
@@ -77,11 +82,6 @@ group :development do
 end
 
 group :production do
-
-
-
-  gem 'mysql2'
-
   gem 'unicorn', '6.1.0'
 end
 
@@ -95,7 +95,4 @@ gem 'pry-rails'
 gem 'payjp'
 gem 'gon'
 gem "aws-sdk-s3", require: false
-<<<<<<< HEAD
-=======
-gem 'sprockets-rails'
->>>>>>> 5a282a94a9a360325a3f6fde02ed19f24fb9e934
+
